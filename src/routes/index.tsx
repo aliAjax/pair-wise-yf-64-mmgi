@@ -160,6 +160,7 @@ export default component$(() => {
       <header class="hero">
         <div><span class="pill">{locale.lang}</span><h1>同声传译与发言队列</h1><p>{activeRoom().name} · {activeRoom().topic}</p></div>
         <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="relay-entry" href="/relay">→ 小语种接力链（源语→英语→目标语 / 断点恢复）</a>
           <select value={state.activeRoomId} onChange$={(event) => selectRoom$((event.target as HTMLSelectElement).value)}>{state.rooms.map((room) => <option value={room.id}>{room.name}</option>)}</select>
           <button class="secondary" onClick$={() => state.lowLatency = !state.lowLatency}>{state.lowLatency ? '退出低延迟' : '低延迟模式'}</button>
         </div>
