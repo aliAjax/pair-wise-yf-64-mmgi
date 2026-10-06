@@ -17,3 +17,76 @@ button.danger { background:#c2413b; }
 input, select, textarea { width:100%; border:1px solid #bdd3d2; border-radius:9px; padding:8px 10px; background:white; }
 .low-latency .decorative { display:none; }
 @media(max-width:900px){ .grid{grid-template-columns:1fr}.queue-row{grid-template-columns:36px 1fr}.queue-row>*:nth-child(n+3){display:none}.hero{align-items:flex-start;flex-direction:column} }
+
+/* ===== 大屏字幕 ===== */
+.live-screen { background:linear-gradient(135deg,#0d3b3f,#102f3a); color:#eafaf7; border-radius:18px; padding:22px 24px; box-shadow:0 18px 40px rgba(13,59,63,.28); }
+.live-head { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap; }
+.live-head h2 { margin:8px 0 0; font-size:clamp(22px,3vw,34px); letter-spacing:-.02em; }
+.live-langs { display:block; font-size:14px; font-weight:500; color:#8fd4cd; margin-top:6px; }
+.live-chain-meta { display:flex; gap:8px; flex-wrap:wrap; }
+.live-chain-meta .pill { background:rgba(255,255,255,.12); color:#cdeee9; }
+.live-chain-meta .pill.chain-recovering { background:#7a4a1e; color:#ffe6c7; }
+.live-empty { color:#9fc7c2; margin:18px 0 4px; }
+.live-channel { margin-top:18px; padding:16px 18px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); border-radius:14px; }
+.live-channel-head { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+.live-channel-head b { font-size:18px; }
+.live-path { color:#8fd4cd; font-size:13px; }
+.live-banner { margin:10px 0 0; padding:8px 12px; background:rgba(122,74,30,.35); border-radius:8px; color:#ffd9ad; font-size:13px; }
+.live-lines { margin-top:12px; display:flex; flex-direction:column; gap:10px; }
+.live-line { display:flex; gap:12px; align-items:baseline; }
+.live-seq { color:#5faea7; font-size:13px; font-variant-numeric:tabular-nums; }
+.live-line p { margin:0; font-size:clamp(18px,2.2vw,26px); line-height:1.45; }
+.live-wait { margin:12px 0 0; color:#ffd9ad; font-size:14px; }
+.live-invalid { margin:12px 0 0; color:#ffb4ad; font-size:14px; }
+
+/* ===== 接力链控制台 ===== */
+.relay-console { display:flex; flex-direction:column; }
+.relay-console-head { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+.relay-create { display:flex; gap:10px; align-items:center; margin:14px 0; flex-wrap:wrap; }
+.relay-create select { width:auto; }
+.relay-arrow { color:#0d7772; font-weight:700; }
+.relay-chain-tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px; }
+.tab { background:#eef6f5; color:#18565a; border-radius:10px; padding:8px 12px; text-align:left; }
+.tab.active { background:#0d7772; color:#fff; }
+.tab.tab-recovering { background:#fdf0e2; color:#8a5a22; }
+.tab.active.tab-recovering { background:#b07a2e; color:#fff; }
+.tab-checkpoint { display:block; font-size:11px; opacity:.8; margin-top:2px; }
+.relay-detail { border-top:1px solid #e6efee; padding-top:14px; }
+.relay-detail-head { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; flex-wrap:wrap; }
+.relay-interpreters { color:#638087; font-size:13px; margin-top:4px; }
+.pipeline-progress { font-size:13px; color:#18565a; margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+.seg-row { border:1px solid #e6efee; border-left-width:4px; border-radius:12px; padding:12px 14px; margin-bottom:12px; background:#fbfdfd; }
+.seg-row.seg-live { border-left-color:#0d7772; }
+.seg-row.seg-confirmed { border-left-color:#3aa0ff; }
+.seg-row.seg-pending { border-left-color:#e0a13c; }
+.seg-row.seg-invalid { border-left-color:#c2413b; background:#fdf4f3; }
+.seg-row.seg-source { border-left-color:#9fb3b2; }
+.seg-head { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:8px; }
+.seg-seq { font-weight:700; color:#0d7772; }
+.seg-versions { font-size:12px; color:#638087; }
+.seg-row small { display:block; color:#638087; font-size:12px; margin-bottom:4px; }
+.seg-source p, .seg-relay p, .seg-target p { margin:0 0 8px; }
+.seg-relay, .seg-target { margin-top:8px; padding-top:8px; border-top:1px dashed #e6efee; }
+.seg-input { display:flex; flex-direction:column; gap:6px; margin-top:6px; }
+.seg-input.append { margin-top:14px; }
+.seg-input textarea { width:100%; }
+.seg-input button { align-self:flex-start; }
+.confirm-btn { background:#3aa0ff; }
+.seg-note { font-size:13px; color:#638087; margin:6px 0 0; }
+.seg-note.warn { color:#b07a2e; }
+.seg-live-text { color:#0d3b3f; font-weight:600; }
+.seg-revise { margin-top:8px; display:flex; flex-direction:column; gap:6px; }
+.link-btn { background:none; color:#0d7772; text-decoration:underline; padding:0; font-size:12px; }
+.strike { text-decoration:line-through; color:#9fb3b2; }
+.pill.seg-live { background:#d8f1ee; color:#086764; }
+.pill.seg-confirmed { background:#e3f0ff; color:#1f6fb2; }
+.pill.seg-pending { background:#fdf0e2; color:#8a5a22; }
+.pill.seg-invalid { background:#fbe3e1; color:#a8322d; }
+.pill.seg-source { background:#eef2f2; color:#5c7174; }
+.pill.chain-recovering { background:#fdf0e2; color:#8a5a22; }
+.pill.chain-active { background:#e2f3f1; color:#086764; }
+.pill.role-relay { background:#e3f0ff; color:#1f6fb2; }
+.pill.role-target { background:#e2f3f1; color:#086764; }
+.pill.role-direct { background:#eef2f2; color:#5c7174; }
+.low-latency .live-screen { box-shadow:none; }
+.low-latency .seg-row { transition:none; }
